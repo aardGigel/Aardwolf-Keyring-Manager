@@ -32,6 +32,7 @@
    sequence="100"
    script="manage_keys"
   >
+  </alias>
 </aliases>
 
 <!--  Script  -->
