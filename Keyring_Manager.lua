@@ -1,10 +1,4 @@
-require "gmcphelper"
-require "serialize"
 require "colors"
-require "utility"
-
-require "tprint"
-require "utility"
 
 local keysBag = "backpack"
 local   areas = {
@@ -1288,18 +1282,21 @@ function manage_keys(name, line, wildcards)
       else
           keys[id] = name .. ":" .. foundAt
       end
-
-      --print(foundAt)
-      --print(lvl)
-      --print(name)
-      --print(a)
       
       ::continue::
   end
-  --tprint(keys)
-  --tprint(dupes)
+
   if(#dupes > 0) then
 --    Execute("dinv get id " .. table.concat(keep, " || id "))
     Execute("dinv put "..keysBag.." id " .. table.concat(dupes, " || id "))
   end
+end
+
+function table.contains(table, element)
+  for _, value in pairs(table) do
+    if value == element then
+      return true
+    end
+  end
+  return false
 end
