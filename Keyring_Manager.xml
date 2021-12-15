@@ -32,16 +32,6 @@
    sequence="100"
    script="manage_keys"
   >
-  </alias>
-  <alias
-   match="^test1$"
-   enabled="y"
-   regexp="y"
-   send_to="12"
-   sequence="100"
-   script="test"
-  >
-  </alias>
 </aliases>
 
 <!--  Script  -->
